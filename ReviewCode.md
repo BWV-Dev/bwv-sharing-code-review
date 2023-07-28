@@ -37,7 +37,9 @@
 ### Common
 * [1.19 Về API thì kiểm tra API search xem có tối ưu performance chưa](#1.19)
 * [1.20 API insert/update/delete nhiều records cùng lúc thì phải dùng transaction/bulkUpdate/bulkInsert thay vì loop rồi xử lý từng record](#1.20)
-* [1.21 Coding rule khác thì tham khảo file coding rule của công ty](#1.21)
+
+### Coding rule khác thì tham khảo file coding rule của công ty
+https://github.com/BWV-Dev/bwv-coding-rules
 
 ### Ngoài ra tùy dự án sẽ có rule khác nhau:
 
@@ -369,28 +371,7 @@ const getCurrentTimeJp = moment.tz("Asia/Tokyo").format('YYYY/MM/DD HH:mm:ss');
 **1.18**
 </td>
 <td width="50%">
-Xử lý liên quan đến ngày tháng nên dùng thư viện moment/day.js</td>
-<td width="45%">
-
-```typescript
-import moment from "moment";
-import "moment-timezone";
-
-// Thư viện có hỗ trợ nhiều function, tiện lợi và chính xác hơn so với xử lý bằng javascript thuần
-const getCurrentTimeJp = moment.tz("Asia/Tokyo").format('YYYY/MM/DD HH:mm:ss');
-
-```
-
-</td>
-</tr>
-
-<tr id="1.19">
-<td width="5%">
-
-**1.19**
-</td>
-<td width="50%">
-Xử lý liên quan đến tiền / số lớn / số chấm phẩy thì phải dùng thư viện Big.js/ Math.js</td>
+Xử lý liên quan đến tiền / số lớn / số chấm phẩy thì phải dùng thư viện Big.js / Math.js</td>
 <td width="45%">
 
 ```typescript
@@ -404,10 +385,10 @@ console.log(x.add(y).toFixed()); // 0.3
 </tr>
 
 
-<tr id="1.20">
+<tr id="1.19">
 <td width="5%">
 
-**1.20**
+**1.19**
 </td>
 <td width="50%">
 Về API thì kiểm tra API search xem có tối ưu performance chưa</td>
@@ -422,10 +403,10 @@ Không select all from table rồi sau đó filter
 </td>
 </tr>
 
-<tr id="1.21">
+<tr id="1.20">
 <td width="5%">
 
-**1.21**
+**1.20**
 </td>
 <td width="50%">
 API insert/update/delete nhiều records cùng lúc thì phải dùng transaction/bulkUpdate/bulkInsert thay vì loop rồi xử lý từng record</td>
